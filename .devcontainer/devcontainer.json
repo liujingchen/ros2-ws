@@ -19,7 +19,7 @@
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash"
 	},
-	"containerEnv": { "DISPLAY": "${localEnv:DISPLAY}" },
+	"containerEnv": { "DISPLAY": "host.docker.internal:0" },
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
@@ -55,5 +55,5 @@
 	// "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
 
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "liu"
+	"remoteUser": "${localEnv:USER}"
 }
